@@ -1,0 +1,27 @@
+# Compiled class files
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Ignore dist
+!dist/*.war
+
+# IntelliJ IDEA files
+*.iml
+.idea
+
+# Mac OS X files
+*.DS_Store
+
+# Gradle/build files
+.gradle
+gradle
+gradlew
+gradlew.bat
+build
