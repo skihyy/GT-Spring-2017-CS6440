@@ -1,13 +1,12 @@
 # Near Care (Continuous, Spring 2017)
 
 ## Team WeChat
-
-# - Aoyi Li @ MSCS
-# - Rui Wang @ MSCS
-# - Yuan Liu@ MSCS
-# - Yishan Chen @ MSCS
-# - Yuyang He @ MSCS
-# - Zining Hou @ BINF
+- Aoyi Li @ MSCS
+- Rui Wang @ MSCS
+- Yuan Liu@ MSCS
+- Yishan Chen @ MSCS
+- Yuyang He @ MSCS
+- Zining Hou @ BINF
 
 ***
 
