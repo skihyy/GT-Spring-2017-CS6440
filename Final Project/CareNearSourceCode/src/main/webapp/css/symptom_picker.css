@@ -1,0 +1,76 @@
+/*
+ CS 6440 Team Radio Star
+ */
+
+#symptomTypeaheadInstructions,
+#userLocationInstructions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #777677
+}
+
+#symptomTypeaheadContainer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-width: 50%;
+}
+
+#symptomTypeaheadContainer > input {
+    min-width: 40%;
+}
+
+#symptomTypeaheadContainer > input:focus {
+    outline: none;
+}
+
+.typeahead.dropdown-menu {
+    border-radius: 0 !important;
+}
+
+#symptomListTitle,
+#userLocationTitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #777677
+}
+
+#symptomListContainer {
+    min-height: 150px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+}
+
+#symptomList {
+    padding: 10px 20px;
+}
+
+#symptomList > li {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#userLocationContainer {
+    margin-top: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    min-height: 40px;
+    padding: 10px 20px;
+}
+
+#symptomButtonContainer {
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.symptoms-button {
+    min-width: 100px;
+    margin-right: 7px;
+    border-radius: 0;
+}
+
+.symptoms-button:focus {
+    outline: none;
+}

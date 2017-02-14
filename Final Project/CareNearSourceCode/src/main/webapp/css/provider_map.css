@@ -1,0 +1,17 @@
+/*
+ CS 6440 Team Radio Star
+ */
+
+#mapContainer {
+    margin-top: 15px;
+}
+
+#map {
+    min-height: 450px;
+}
+
+.place-info-button {
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 0;
+}

@@ -1,0 +1,182 @@
+# CareNear API
+#
+# Author: Alex Welton (awelton3@gatech.edu)
+#
+
+swagger: '2.0'
+info:
+  title: CareNear API
+  description: CS 6440 Team Radio Star - Fall 2016 Project
+  version: "1.0.0"
+
+host: carenear.azurewebsites.net
+
+schemes:
+  - https
+
+basePath: /api/v1
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+
+  /symptoms:
+
+    get:
+      summary: Get list of symptoms.
+      description: |
+        Get the list of symptoms to display in the typeahead list.
+      tags:
+        - Symptoms
+      responses:
+        200:
+          description: The list of symptoms.
+          schema:
+            $ref: '#/definitions/SymptomList'
+
+  /providers:
+
+    post:
+      summary: Get providers for a list of symptoms.
+      description: |
+        Get the list of providers for a list of symptoms.
+      tags:
+        - Providers
+      parameters:
+        - name: body
+          in: body
+          description: The symptom list to query providers for.
+          required: true
+          schema:
+            $ref: '#/definitions/SymptomList'
+      responses:
+        200:
+          description: The list of providers.
+          schema:
+            $ref: '#/definitions/ProviderList'
+        400:
+          description: Bad request response.
+
+  /maps/geocode:
+
+    post:
+      summary: Geocode an address and get the coordinates back.
+      description: |
+        Geocode an address and get the coordinates back.
+      tags:
+        - Maps
+      parameters:
+        - name: body
+          in: body
+          description: The user address information.
+          required: true
+          schema:
+            $ref: '#/definitions/UserAddress'
+      responses:
+        200:
+          description: The geocode response.
+          schema:
+            $ref: '#/definitions/UserLocationData'
+        400:
+          description: Bad request response.
+
+  /maps/reverse_geocode:
+
+    post:
+      summary: Reverse geocode a set of coordinates and get an address response back.
+      description: |
+        Geocode an address and get the coordinates back.
+      tags:
+        - Maps
+      parameters:
+        - name: body
+          in: body
+          description: The latitude/longitude.
+          required: true
+          schema:
+            $ref: '#/definitions/LatLng'
+      responses:
+        200:
+          description: The geocode response.
+          schema:
+            $ref: '#/definitions/UserLocationData'
+        400:
+          description: Bad request response.
+
+definitions:
+
+  UserLocationData:
+    type: object
+    description: The user location data.
+    properties:
+      address_text:
+        type: string
+        description: The text of the address.
+      lat_lng:
+        $ref: '#/definitions/LatLng'
+      place_id:
+        type: string
+        description: The Google place ID.
+      types:
+        type: array
+        description: The place types array.
+        items:
+          type: string
+
+  LatLng:
+    type: object
+    description: The Google Maps LatLng object.
+    required: [
+      lat,
+      lng
+    ]
+    properties:
+      lat:
+        type: number
+        format: double
+        description: The latitude.
+      lng:
+        type: number
+        format: double
+        description: The longitude.
+
+  UserAddress:
+    type: object
+    description: Wrapper for address.
+    required: [
+      address_text
+    ]
+    properties:
+      address_text:
+        type: string
+        description: The text of the address.
+
+  SymptomList:
+    type: object
+    description: Wrapper for a list of symptoms.
+    required: [
+      symptoms
+    ]
+    properties:
+      symptoms:
+        type: array
+        description: The list of symptoms.
+        items:
+          type: string
+
+  ProviderList:
+    type: object
+    description: Wrapper for a list of providers.
+    required: [
+      providers
+    ]
+    properties:
+      providers:
+        type: array
+        description: The list of providers.
+        items:
+          type: string
+
