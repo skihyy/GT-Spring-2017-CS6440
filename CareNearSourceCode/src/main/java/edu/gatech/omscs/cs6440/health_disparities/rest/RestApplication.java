@@ -10,15 +10,18 @@ import java.util.Set;
  *
  * @author awelton3
  */
-@ApplicationPath("/api/v1")
-public class RestApplication extends Application {
+@ApplicationPath ("/api/v1")
+public class RestApplication extends Application
+{
 
     /**
      * Get the set of REST resource classes
+     *
      * @return the set of classes
      */
     @Override
-    public Set<Class<?>> getClasses() {
+    public Set<Class<?>> getClasses()
+    {
         Set<Class<?>> classes = new HashSet<>();
 
         classes.add(SymptomsEndpoint.class);

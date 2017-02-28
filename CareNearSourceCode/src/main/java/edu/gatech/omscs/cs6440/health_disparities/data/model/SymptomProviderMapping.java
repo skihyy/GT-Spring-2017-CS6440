@@ -7,32 +7,43 @@ import com.google.gson.annotations.SerializedName;
  *
  * @author awelton3
  */
-public class SymptomProviderMapping {
+public class SymptomProviderMapping
+{
 
-    @SerializedName("symptom")
+    @SerializedName ("symptom")
     private String symptom;
 
-    @SerializedName("provider")
+    @SerializedName ("provider")
     private String provider;
 
-    public String getSymptom() {
+    public String getSymptom()
+    {
         return symptom;
     }
-    public void setSymptom(String symptom) {
+
+    public void setSymptom(String symptom)
+    {
         this.symptom = symptom;
     }
-    public SymptomProviderMapping withSymptom(String symptom) {
+
+    public SymptomProviderMapping withSymptom(String symptom)
+    {
         this.symptom = symptom;
         return this;
     }
 
-    public String getProvider() {
+    public String getProvider()
+    {
         return provider;
     }
-    public void setProvider(String provider) {
+
+    public void setProvider(String provider)
+    {
         this.provider = provider;
     }
-    public SymptomProviderMapping withProvider(String provider) {
+
+    public SymptomProviderMapping withProvider(String provider)
+    {
         this.provider = provider;
         return this;
     }

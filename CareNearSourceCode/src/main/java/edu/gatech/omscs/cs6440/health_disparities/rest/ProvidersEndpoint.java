@@ -17,24 +17,29 @@ import javax.ws.rs.core.Response;
  *
  * @author awelton3
  */
-@Path("/providers")
-public class ProvidersEndpoint {
+@Path ("/providers")
+public class ProvidersEndpoint
+{
 
     /**
      * Get the prioritized list of providers for the list of symptoms
+     *
      * @param body the body
      * @return the prioritized list of providers for the list of symptoms
      */
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getProvidersForSymptoms(String body) {
-        if (body == null || body.isEmpty()) {
+    @Consumes (MediaType.APPLICATION_JSON)
+    @Produces (MediaType.APPLICATION_JSON)
+    public Response getProvidersForSymptoms(String body)
+    {
+        if (body == null || body.isEmpty())
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
         SymptomList submittedSymptoms = JsonUtils.getGsonInstance().fromJson(body, SymptomList.class);
-        if (submittedSymptoms == null) {
+        if (submittedSymptoms == null)
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 

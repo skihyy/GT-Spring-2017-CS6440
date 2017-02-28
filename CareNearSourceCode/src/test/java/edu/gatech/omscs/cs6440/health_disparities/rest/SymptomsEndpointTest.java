@@ -11,10 +11,12 @@ import static org.junit.Assert.*;
 /**
  * Class to unit test symptoms endpoint
  */
-public class SymptomsEndpointTest {
+public class SymptomsEndpointTest
+{
 
     @Test
-    public void testListSymptoms() {
+    public void testListSymptoms()
+    {
         SymptomsEndpoint symptomsEndpoint = new SymptomsEndpoint();
         Response listSymptomsResponse = symptomsEndpoint.listSymptoms();
         assertNotNull(listSymptomsResponse);

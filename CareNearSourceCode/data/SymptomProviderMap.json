@@ -1,1 +1,316 @@
-{"symptom_provider_mappings":[{"symptom":"Toothache (ache)","provider":"Dentist"},{"symptom":"Trouble Breathing","provider":"Emergency Room"},{"symptom":"Can\u0027t Move One Side - Arm and/or Leg","provider":"Emergency Room"},{"symptom":"Can\u0027t Remember Normally","provider":"Emergency Room"},{"symptom":"Blindness","provider":"Emergency Room"},{"symptom":"Can\u0027t Speak Normally","provider":"Emergency Room"},{"symptom":"Can\u0027t Stop Sweating","provider":"Emergency Room"},{"symptom":"Can\u0027t Swallow Normally","provider":"Emergency Room"},{"symptom":"Can\u0027t Walk Normally","provider":"Emergency Room"},{"symptom":"Can\u0027t Write Normally","provider":"Emergency Room"},{"symptom":"Choking","provider":"Emergency Room"},{"symptom":"Stopped Breathing","provider":"Emergency Room"},{"symptom":"Neck/Spine Injury","provider":"Emergency Room"},{"symptom":"Loss of Ability to Move","provider":"Emergency Room"},{"symptom":"Electric Shock or Lightning Strike","provider":"Emergency Room"},{"symptom":"Severe Burn","provider":"Emergency Room"},{"symptom":"Servere Chest Pain/Pressure","provider":"Emergency Room"},{"symptom":"Seizure","provider":"Emergency Room"},{"symptom":"Heavy Bleeding","provider":"Emergency Room"},{"symptom":"Broken Bone","provider":"Emergency Room"},{"symptom":"Deep Wound","provider":"Emergency Room"},{"symptom":"Coughing up Blood","provider":"Emergency Room"},{"symptom":"Severe Allergic Reaction","provider":"Emergency Room"},{"symptom":"Drug Overdose","provider":"Emergency Room"},{"symptom":"Poisoning","provider":"Emergency Room"},{"symptom":"Dehydrated","provider":"Emergency Room"},{"symptom":"Hungry","provider":"Food Kitchen"},{"symptom":"Earache","provider":"Mini-Clinic"},{"symptom":"Sick - Flu","provider":"Mini-Clinic"},{"symptom":"Constipation","provider":"Mini-Clinic"},{"symptom":"Can\u0027t Pass Urine Normally","provider":"Mini-Clinic"},{"symptom":"Insomnia","provider":"Mini-Clinic"},{"symptom":"Diarrhea","provider":"Mini-Clinic"},{"symptom":"Itchiness","provider":"Mini-Clinic"},{"symptom":"Can\u0027t Taste Properly","provider":"Mini-Clinic"},{"symptom":"Allergies","provider":"Mini-Clinic"},{"symptom":"Acne","provider":"Mini-Clinic"},{"symptom":"Vaccines","provider":"Mini-Clinic"},{"symptom":"Insect Bites/Stings","provider":"Mini-Clinic"},{"symptom":"Wart Removal","provider":"Mini-Clinic"},{"symptom":"Cholesterol Screening","provider":"Mini-Clinic"},{"symptom":"Physicals","provider":"Mini-Clinic"},{"symptom":"Blood Sugar Testing","provider":"Mini-Clinic"},{"symptom":"Blood Pressure Checks","provider":"Mini-Clinic"},{"symptom":"Sleepy","provider":"Mini-Clinic"},{"symptom":"Withdrawal","provider":"Rehabilitiation Service"},{"symptom":"Need Somewhere to Rest","provider":"Shelter"},{"symptom":"Abdominal Pain","provider":"Urgent Care"},{"symptom":"Back Pain","provider":"Urgent Care"},{"symptom":"Chest Pain","provider":"Urgent Care"},{"symptom":"Headache","provider":"Urgent Care"},{"symptom":"Chronic Pelvic Pain","provider":"Urgent Care"},{"symptom":"Vaginal Pain","provider":"Urgent Care"},{"symptom":"Rectal Pain","provider":"Urgent Care"},{"symptom":"Chills","provider":"Urgent Care"},{"symptom":"Fever","provider":"Urgent Care"},{"symptom":"Light-headed","provider":"Urgent Care"},{"symptom":"Dizziness","provider":"Urgent Care"},{"symptom":"Dry Mouth","provider":"Urgent Care"},{"symptom":"Nauseated","provider":"Urgent Care"},{"symptom":"Vomiting","provider":"Urgent Care"},{"symptom":"Shortness of breath","provider":"Urgent Care"},{"symptom":"Sweaty","provider":"Urgent Care"},{"symptom":"Tired","provider":"Urgent Care"},{"symptom":"Weak","provider":"Urgent Care"},{"symptom":"Hearing Loss","provider":"Urgent Care"},{"symptom":"Sounds are too Loud","provider":"Urgent Care"},{"symptom":"Ringing or Hissing in Ears","provider":"Urgent Care"},{"symptom":"Blurred Vision","provider":"Urgent Care"},{"symptom":"Double Vision","provider":"Urgent Care"},{"symptom":"Can\u0027t Smell things Normally","provider":"Urgent Care"},{"symptom":"Cold","provider":"Urgent Care"},{"symptom":"Sore Throat","provider":"Urgent Care"},{"symptom":"Rash","provider":"Urgent Care"},{"symptom":"Sprain","provider":"Urgent Care"},{"symptom":"Minor Cut","provider":"Urgent Care"},{"symptom":"Bruising","provider":"Urgent Care"},{"symptom":"Minor Head Injury","provider":"Urgent Care"}]}
+{
+  "symptom_provider_mappings": [
+    {
+      "symptom": "Toothache (ache)",
+      "provider": "Dentist"
+    },
+    {
+      "symptom": "Trouble Breathing",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Move One Side - Arm and/or Leg",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Remember Normally",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Blindness",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Speak Normally",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Stop Sweating",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Swallow Normally",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Walk Normally",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Can\u0027t Write Normally",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Choking",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Stopped Breathing",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Neck/Spine Injury",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Loss of Ability to Move",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Electric Shock or Lightning Strike",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Severe Burn",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Servere Chest Pain/Pressure",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Seizure",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Heavy Bleeding",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Broken Bone",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Deep Wound",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Coughing up Blood",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Severe Allergic Reaction",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Drug Overdose",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Poisoning",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Dehydrated",
+      "provider": "Emergency Room"
+    },
+    {
+      "symptom": "Hungry",
+      "provider": "Food Kitchen"
+    },
+    {
+      "symptom": "Earache",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Sick - Flu",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Constipation",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Can\u0027t Pass Urine Normally",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Insomnia",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Diarrhea",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Itchiness",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Can\u0027t Taste Properly",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Allergies",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Acne",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Vaccines",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Insect Bites/Stings",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Wart Removal",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Cholesterol Screening",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Physicals",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Blood Sugar Testing",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Blood Pressure Checks",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Sleepy",
+      "provider": "Mini-Clinic"
+    },
+    {
+      "symptom": "Withdrawal",
+      "provider": "Rehabilitiation Service"
+    },
+    {
+      "symptom": "Need Somewhere to Rest",
+      "provider": "Shelter"
+    },
+    {
+      "symptom": "Abdominal Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Back Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Chest Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Headache",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Chronic Pelvic Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Vaginal Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Rectal Pain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Chills",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Fever",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Light-headed",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Dizziness",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Dry Mouth",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Nauseated",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Vomiting",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Shortness of breath",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Sweaty",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Tired",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Weak",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Hearing Loss",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Sounds are too Loud",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Ringing or Hissing in Ears",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Blurred Vision",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Double Vision",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Can\u0027t Smell things Normally",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Cold",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Sore Throat",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Rash",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Sprain",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Minor Cut",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Bruising",
+      "provider": "Urgent Care"
+    },
+    {
+      "symptom": "Minor Head Injury",
+      "provider": "Urgent Care"
+    }
+  ]
+}

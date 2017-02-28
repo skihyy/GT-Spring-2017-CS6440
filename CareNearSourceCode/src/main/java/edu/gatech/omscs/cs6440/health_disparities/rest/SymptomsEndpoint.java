@@ -15,16 +15,19 @@ import javax.ws.rs.core.Response;
  *
  * @author awelton3
  */
-@Path("/symptoms")
-public class SymptomsEndpoint {
+@Path ("/symptoms")
+public class SymptomsEndpoint
+{
 
     /**
      * List the available symptoms that provider data exists for
+     *
      * @return the list of symptoms
      */
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response listSymptoms() {
+    @Produces (MediaType.APPLICATION_JSON)
+    public Response listSymptoms()
+    {
         SymptomList symptomList = new SymptomList()
                 .withSymptoms(SymptomProviderLookups.getAllSymptoms());
         return Response.ok()

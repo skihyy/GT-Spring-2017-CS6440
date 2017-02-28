@@ -10,45 +10,58 @@ import java.util.List;
  *
  * @author awelton3
  */
-public class UserLocationData {
+public class UserLocationData
+{
 
-    @SerializedName("address_text")
+    @SerializedName ("address_text")
     private String addressText;
 
-    @SerializedName("lat_lng")
+    @SerializedName ("lat_lng")
     private LatLng latLng;
 
-    @SerializedName("place_id")
+    @SerializedName ("place_id")
     private String placeId;
 
-    @SerializedName("types")
+    @SerializedName ("types")
     private List<String> types;
 
-    public String getAddressText() {
+    public String getAddressText()
+    {
         return addressText;
     }
-    public void setAddressText(String addressText) {
+
+    public void setAddressText(String addressText)
+    {
         this.addressText = addressText;
     }
 
-    public LatLng getLatLng() {
+    public LatLng getLatLng()
+    {
         return latLng;
     }
-    public void setLatLng(LatLng latLng) {
+
+    public void setLatLng(LatLng latLng)
+    {
         this.latLng = latLng;
     }
 
-    public String getPlaceId() {
+    public String getPlaceId()
+    {
         return placeId;
     }
-    public void setPlaceId(String placeId) {
+
+    public void setPlaceId(String placeId)
+    {
         this.placeId = placeId;
     }
 
-    public List<String> getTypes() {
+    public List<String> getTypes()
+    {
         return types;
     }
-    public void setTypes(List<String> types) {
+
+    public void setTypes(List<String> types)
+    {
         this.types = types;
     }
 

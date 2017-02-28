@@ -18,25 +18,30 @@ import javax.ws.rs.core.Response;
  *
  * @author awelton3
  */
-@Path("/maps")
-public class MapsEndpoint {
+@Path ("/maps")
+public class MapsEndpoint
+{
 
     /**
      * Geocode an address
+     *
      * @param body the body containing an address to geocode
      * @return the geocode response
      */
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/geocode")
-    public Response geocodeAddress(String body) throws Exception {
-        if (body == null || body.isEmpty()) {
+    @Consumes (MediaType.APPLICATION_JSON)
+    @Produces (MediaType.APPLICATION_JSON)
+    @Path ("/geocode")
+    public Response geocodeAddress(String body) throws Exception
+    {
+        if (body == null || body.isEmpty())
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
         UserAddress userAddress = JsonUtils.getGsonInstance().fromJson(body, UserAddress.class);
-        if (userAddress == null || userAddress.getAddressText() == null) {
+        if (userAddress == null || userAddress.getAddressText() == null)
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
@@ -48,20 +53,24 @@ public class MapsEndpoint {
 
     /**
      * Reverse geocode a set of coordinates
+     *
      * @param body the body containing coordinates
      * @return the geocode response
      */
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/reverse_geocode")
-    public Response reverseGeocodeCoordinates(String body) throws Exception {
-        if (body == null || body.isEmpty()) {
+    @Consumes (MediaType.APPLICATION_JSON)
+    @Produces (MediaType.APPLICATION_JSON)
+    @Path ("/reverse_geocode")
+    public Response reverseGeocodeCoordinates(String body) throws Exception
+    {
+        if (body == null || body.isEmpty())
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 
         LatLng latLng = JsonUtils.getGsonInstance().fromJson(body, LatLng.class);
-        if (latLng == null) {
+        if (latLng == null)
+        {
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
 

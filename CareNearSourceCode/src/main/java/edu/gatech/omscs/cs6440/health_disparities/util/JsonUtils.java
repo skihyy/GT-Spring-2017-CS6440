@@ -8,17 +8,21 @@ import com.google.gson.GsonBuilder;
  *
  * @author awelton3
  */
-public class JsonUtils {
+public class JsonUtils
+{
 
     private static Gson gsonInstance = null;
     private static Gson prettyGsonInstance = null;
 
     /**
      * Get the singleton Gson instance
+     *
      * @return the singleton Gson instance
      */
-    public static synchronized Gson getGsonInstance() {
-        if (gsonInstance == null) {
+    public static synchronized Gson getGsonInstance()
+    {
+        if (gsonInstance == null)
+        {
             gsonInstance = new GsonBuilder().create();
         }
         return gsonInstance;
@@ -26,10 +30,13 @@ public class JsonUtils {
 
     /**
      * Get the singleton pretty Gson instance
+     *
      * @return the singleton pretty Gson instance
      */
-    public static synchronized Gson getPrettyGsonInstance() {
-        if (prettyGsonInstance == null) {
+    public static synchronized Gson getPrettyGsonInstance()
+    {
+        if (prettyGsonInstance == null)
+        {
             prettyGsonInstance = new GsonBuilder().setPrettyPrinting().create();
         }
         return prettyGsonInstance;

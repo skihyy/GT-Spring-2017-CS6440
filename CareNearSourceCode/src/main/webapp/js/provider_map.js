@@ -19,14 +19,14 @@ var destinationAddress = null;
  */
 function setUpGoogleMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 39.5, lng: -98.35 },                        // Center of contiguous US
+        center: {lat: 39.5, lng: -98.35},                        // Center of contiguous US
         scrollwheel: false,
         zoom: 3
     });
 
     placesService = new google.maps.places.PlacesService(map);
     placeInfoWindow = new google.maps.InfoWindow();
-    google.maps.event.addListener(map, "click", function() {
+    google.maps.event.addListener(map, "click", function () {
         if (placeInfoWindow != null) {
             placeInfoWindow.close();
         }
@@ -71,11 +71,11 @@ function queryAndShowProvidersForSymptoms(symptomList) {
         dataType: "json",
         data: JSON.stringify(symptomList),
         statusCode: {
-            200: function(response) {
+            200: function (response) {
                 searchProvidersInGoogleMap(response);
             }
         },
-        error: function() {
+        error: function () {
             handleProvidersQueryError();
         }
     });
@@ -166,7 +166,7 @@ function addPlaceMarkerToMap(place) {
     });
 
     // Add a listener to show place details on marker click
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function () {
         showPlaceDetails(place, marker);
     });
 
@@ -179,7 +179,7 @@ function addPlaceMarkerToMap(place) {
  * @param marker the marker
  */
 function showPlaceDetails(place, marker) {
-    placesService.getDetails(place, function(result, status) {
+    placesService.getDetails(place, function (result, status) {
         if (status !== google.maps.places.PlacesServiceStatus.OK) {
             console.error(status);
             return;
@@ -203,15 +203,14 @@ function createPlaceInfoWindowContent(placeResult) {
         infoWindowHtml = infoWindowHtml + createWebsiteLink(placeResult.website) + "<br>";
     }
 
-    if (placeResult.opening_hours != null)
-    {
+    if (placeResult.opening_hours != null) {
 
         if (placeResult.opening_hours.open_now == true) {
             infoWindowHtml = infoWindowHtml + "<span style= \"color:green;\">Currently Open </span><br>";
-        }else {
+        } else {
             infoWindowHtml = infoWindowHtml + "<span style= \"color:red;\">Currently Closed </span><br>";
         }
-    }else{
+    } else {
         infoWindowHtml = infoWindowHtml + "Call to confirm if open <br>";
     }
 
@@ -299,7 +298,7 @@ function displayDirectionsInMap(fromLocation, toAddress) {
         destination: toAddress,
         travelMode: 'DRIVING'
     };
-    directionsService.route(directionsRequest, function(result, status) {
+    directionsService.route(directionsRequest, function (result, status) {
         if (status == 'OK') {
             directionsDisplay.setDirections(result);
         }

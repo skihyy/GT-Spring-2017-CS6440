@@ -6,11 +6,10 @@ import edu.gatech.omscs.cs6440.health_disparities.util.JsonUtils;
 import org.junit.Test;
 
 import javax.ws.rs.core.Response;
-
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 
 /**
@@ -18,10 +17,12 @@ import java.util.List;
  *
  * @author awelton3
  */
-public class ProvidersEndpointTest {
+public class ProvidersEndpointTest
+{
 
     @Test
-    public void testGetProvidersForSymptoms() {
+    public void testGetProvidersForSymptoms()
+    {
         List<String> symptoms = Arrays.asList("Deep Wound", "Choking", "Toothache (ache)", "Insomnia");
         SymptomList symptomList = new SymptomList()
                 .withSymptoms(symptoms);

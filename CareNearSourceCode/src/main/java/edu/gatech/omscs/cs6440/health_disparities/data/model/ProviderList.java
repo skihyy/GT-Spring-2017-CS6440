@@ -9,18 +9,24 @@ import java.util.List;
  *
  * @author awelton3
  */
-public class ProviderList {
+public class ProviderList
+{
 
-    @SerializedName("providers")
+    @SerializedName ("providers")
     private List<String> providers;
 
-    public List<String> getProviders() {
+    public List<String> getProviders()
+    {
         return providers;
     }
-    public void setProviders(List<String> providers) {
+
+    public void setProviders(List<String> providers)
+    {
         this.providers = providers;
     }
-    public ProviderList withProviders(List<String> providers) {
+
+    public ProviderList withProviders(List<String> providers)
+    {
         this.providers = providers;
         return this;
     }

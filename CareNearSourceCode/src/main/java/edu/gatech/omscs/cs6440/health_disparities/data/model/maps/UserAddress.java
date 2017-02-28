@@ -7,15 +7,19 @@ import com.google.gson.annotations.SerializedName;
  *
  * @author awelton3
  */
-public class UserAddress {
+public class UserAddress
+{
 
-    @SerializedName("address_text")
+    @SerializedName ("address_text")
     private String addressText;
 
-    public String getAddressText() {
+    public String getAddressText()
+    {
         return addressText;
     }
-    public void setAddressText(String addressText) {
+
+    public void setAddressText(String addressText)
+    {
         this.addressText = addressText;
     }
 

@@ -8,7 +8,7 @@
 function setUpSymptomPicker() {
     loadSymptomsAndPopulateTypeahead();
     setUpSymptomPickerEvents();
-    setTimeout(function() {
+    setTimeout(function () {
         requestAndDisplayUserLocation();
     }, 1000);
 }
@@ -20,10 +20,10 @@ var selectedSymptoms = [];
  * Set up the events associated with the symptom picker, e.g. buttons
  */
 function setUpSymptomPickerEvents() {
-    $("#symptomsClearButton").click(function() {
+    $("#symptomsClearButton").click(function () {
         clearSymptomList();
     });
-    $("#symptomsSearchButton").click(function() {
+    $("#symptomsSearchButton").click(function () {
         queryAndShowProvidersForSymptoms(constructSymptomListFromSelectedSymptoms());
     })
 }
@@ -48,12 +48,12 @@ function loadSymptomsAndPopulateTypeahead() {
         url: symptomsUrl,
         contentType: "application/json",
         statusCode: {
-            200: function(response) {
+            200: function (response) {
                 cachedSymptomList = response;
                 populateSymptomsTypeahead(cachedSymptomList);
             }
         },
-        error: function() {
+        error: function () {
             handleSymptomsTypeaheadError();
         }
     });
@@ -175,13 +175,13 @@ function displayUserLocation(location) {
         dataType: "json",
         data: JSON.stringify(latLng),
         statusCode: {
-            200: function(response) {
+            200: function (response) {
                 if (response != null && response["address_text"] != null) {
                     displayUserAddress(response["address_text"]);
                 }
             }
         },
-        error: function() {
+        error: function () {
             handleReverseGeocodeError();
         }
     });

@@ -1,11 +1,11 @@
 /*
-    CS 6440 Team Radio Star
+ CS 6440 Team Radio Star
  */
 
 /**
  * Initial setup
  */
-$(function() {
+$(function () {
     setUpSymptomPicker();
 });
 

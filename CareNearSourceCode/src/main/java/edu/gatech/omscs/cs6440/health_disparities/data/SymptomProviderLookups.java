@@ -7,13 +7,16 @@ import java.util.*;
  *
  * @author awelton3
  */
-public class SymptomProviderLookups {
+public class SymptomProviderLookups
+{
 
     private static final boolean EMERGENCY_ROOM_ALWAYS_FIRST = true;
     private static final String EMERGENCY_ROOM = "Emergency Room";
 
     private static final Map<String, String> symptomProviderMappings;
-    static {
+
+    static
+    {
         Map<String, String> symptomProviderMap = new TreeMap<>();
 
         symptomProviderMap.put("Toothache (ache)", "Dentist");
@@ -108,43 +111,56 @@ public class SymptomProviderLookups {
 
     /**
      * Test that a symptom is valid and we have a provider for it
+     *
      * @param symptom the symptom text
      * @return true if the symptom is valid
      */
-    private static synchronized boolean isValidSymptom(String symptom) {
+    private static synchronized boolean isValidSymptom(String symptom)
+    {
         return symptomProviderMappings.containsKey(symptom);
     }
 
     /**
      * Get the list of all symptoms from the map
+     *
      * @return the list of all symptoms
      */
-    public static synchronized List<String> getAllSymptoms() {
+    public static synchronized List<String> getAllSymptoms()
+    {
         return new ArrayList<>(symptomProviderMappings.keySet());
     }
 
     /**
      * Get the list of providers for the list of symptoms, prioritized
+     *
      * @param symptoms the symptoms
      * @return the list of providers, prioritized
      */
-    public static synchronized List<String> getProvidersForSymptoms(List<String> symptoms) {
-        if (symptoms == null || symptoms.isEmpty()) {
+    public static synchronized List<String> getProvidersForSymptoms(List<String> symptoms)
+    {
+        if (symptoms == null || symptoms.isEmpty())
+        {
             return new ArrayList<>();
         }
 
         // Get frequencies of provider recommendations to provide priority
         Map<String, Integer> providerCounts = new HashMap<>();
-        if (EMERGENCY_ROOM_ALWAYS_FIRST) {
+        if (EMERGENCY_ROOM_ALWAYS_FIRST)
+        {
             providerCounts.put(EMERGENCY_ROOM, 1000000);
         }
-        for (String symptom : symptoms) {
-            if (isValidSymptom(symptom)) {
+        for (String symptom : symptoms)
+        {
+            if (isValidSymptom(symptom))
+            {
                 String provider = getProviderForSymptom(symptom);
-                if (providerCounts.containsKey(provider)) {
+                if (providerCounts.containsKey(provider))
+                {
                     int oldValue = providerCounts.get(provider);
                     providerCounts.replace(provider, oldValue + 1);
-                } else {
+                }
+                else
+                {
                     providerCounts.put(provider, 1);
                 }
             }
@@ -158,11 +174,14 @@ public class SymptomProviderLookups {
 
     /**
      * Get the appropriate provider resource for a given symptom
+     *
      * @param symptom the symptom text
      * @return the appropriate provider resource, or null
      */
-    public static synchronized String getProviderForSymptom(String symptom) {
-        if (symptomProviderMappings.containsKey(symptom)) {
+    public static synchronized String getProviderForSymptom(String symptom)
+    {
+        if (symptomProviderMappings.containsKey(symptom))
+        {
             return symptomProviderMappings.get(symptom);
         }
         return null;

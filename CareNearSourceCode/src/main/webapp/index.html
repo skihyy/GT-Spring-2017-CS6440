@@ -4,125 +4,137 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="CareNear" />
-    <meta name="author" content="Team Radio Star" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="description" content="CareNear"/>
+    <meta name="author" content="Team Radio Star"/>
 
     <title>Health Resource Finder</title>
 
     <!-- Lib styling -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- App styling -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/symptom_picker.css" />
-    <link rel="stylesheet" type="text/css" href="css/provider_map.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/symptom_picker.css"/>
+    <link rel="stylesheet" type="text/css" href="css/provider_map.css"/>
 </head>
 <body>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <div id="appTitle" class="navbar-brand">CareNear</div>
-                <a id="fairHealthLink" class="navbar-brand" href="http://www.fairhealth.org" target="_blank">FAIR Health</a>
-                <a id="userManualLink" class="navbar-brand" href="CareNear_Manual.pdf" target="_blank">User Manual</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main content container -->
-    <div id="appContainer" class="container-fluid">
-        <div class="row">
-
-            <!-- First column -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 health-column">
-                <div id="symptomPicker">
-                    <div id="symptomPickerHeader" class="health-column-header">
-                        Symptoms
-                    </div>
-                    <div id="symptomPickerContainer">
-
-                        <!-- Instructions for symptom picker -->
-                        <div id="symptomTypeaheadInstructions">
-                            Click in the input box below to see a list of symptoms. You can type to filter to the symptoms you are experiencing. Add all symptoms that you are experiencing to the list, and press "Submit" when you are finished.
-                        </div>
-
-                        <!-- Typeahead input for symptoms -->
-                        <div id="symptomTypeaheadContainer">
-                            <input id="symptomTypeaheadInput" type="text" data-provide="typeahead" autocomplete="off" placeholder=" Enter symptom" />
-                        </div>
-
-                        <!-- List of user-selected symptoms -->
-                        <div id="symptomListTitle">
-                            Your symptoms:
-                        </div>
-                        <div id="symptomListContainer">
-                            <ul id="symptomList">
-                                <!-- Symptoms go in here -->
-                            </ul>
-                        </div>
-
-                        <!-- Instructions for user location -->
-                        <div id="userLocationInstructions">
-                            Your location is required in order to find providers near you. Please share your location when prompted.
-                        </div>
-
-                        <!-- User location display -->
-                        <div id="userLocationTitle">
-                            Your location:
-                        </div>
-                        <div id="userLocationContainer">
-                            <!-- User location goes here -->
-                        </div>
-
-                        <!-- Clear and submit buttons -->
-                        <div id="symptomButtonContainer">
-                            <button id="symptomsClearButton" class="btn btn-primary symptoms-button" type="button">Clear</button>
-                            <button id="symptomsSearchButton" class="btn btn-primary symptoms-button" type="button">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second column -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 health-column">
-                <div id="mapHeader" class="health-column-header">
-                    Providers
-                </div>
-                <div id="mapContainer">
-                    <div id="map"></div>
-                </div>
-            </div>
-
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div id="appTitle" class="navbar-brand">CareNear</div>
+            <a id="fairHealthLink" class="navbar-brand" href="http://www.fairhealth.org" target="_blank">FAIR Health</a>
+            <a id="userManualLink" class="navbar-brand" href="CareNear_Manual.pdf" target="_blank">User Manual</a>
         </div>
     </div>
+</nav>
 
-    <!-- Fixed footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div id="footerText">
-                CS 6440 - Fall 2016 - Team Radio Star
+<!-- Main content container -->
+<div id="appContainer" class="container-fluid">
+    <div class="row">
+
+        <!-- First column -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 health-column">
+            <div id="symptomPicker">
+                <div id="symptomPickerHeader" class="health-column-header">
+                    Symptoms
+                </div>
+                <div id="symptomPickerContainer">
+
+                    <!-- Instructions for symptom picker -->
+                    <div id="symptomTypeaheadInstructions">
+                        Click in the input box below to see a list of symptoms. You can type to filter to the symptoms
+                        you are experiencing. Add all symptoms that you are experiencing to the list, and press "Submit"
+                        when you are finished.
+                    </div>
+
+                    <!-- Typeahead input for symptoms -->
+                    <div id="symptomTypeaheadContainer">
+                        <input id="symptomTypeaheadInput" type="text" data-provide="typeahead" autocomplete="off"
+                               placeholder=" Enter symptom"/>
+                    </div>
+
+                    <!-- List of user-selected symptoms -->
+                    <div id="symptomListTitle">
+                        Your symptoms:
+                    </div>
+                    <div id="symptomListContainer">
+                        <ul id="symptomList">
+                            <!-- Symptoms go in here -->
+                        </ul>
+                    </div>
+
+                    <!-- Instructions for user location -->
+                    <div id="userLocationInstructions">
+                        Your location is required in order to find providers near you. Please share your location when
+                        prompted.
+                    </div>
+
+                    <!-- User location display -->
+                    <div id="userLocationTitle">
+                        Your location:
+                    </div>
+                    <div id="userLocationContainer">
+                        <!-- User location goes here -->
+                    </div>
+
+                    <!-- Clear and submit buttons -->
+                    <div id="symptomButtonContainer">
+                        <button id="symptomsClearButton" class="btn btn-primary symptoms-button" type="button">Clear
+                        </button>
+                        <button id="symptomsSearchButton" class="btn btn-primary symptoms-button" type="button">Submit
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <!-- Lib JS -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="lib/js/bootstrap3-typeahead.min.js"></script>
+        <!-- Second column -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 health-column">
+            <div id="mapHeader" class="health-column-header">
+                Providers
+            </div>
+            <div id="mapContainer">
+                <div id="map"></div>
+            </div>
+        </div>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/symptom_picker.js"></script>
-    <script type="text/javascript" src="js/provider_map.js"></script>
+    </div>
+</div>
 
-    <!-- Map JS -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0XgNv_xuQFF77kYam2oLALQNcX9hAq_U&libraries=places&callback=setUpGoogleMap" async defer></script>
+<!-- Fixed footer -->
+<footer class="footer">
+    <div class="container-fluid">
+        <div id="footerText">
+            CS 6440 - Fall 2016 - Team Radio Star
+        </div>
+    </div>
+</footer>
+
+<!-- Lib JS -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="lib/js/bootstrap3-typeahead.min.js"></script>
+
+<!-- App JS -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/symptom_picker.js"></script>
+<script type="text/javascript" src="js/provider_map.js"></script>
+
+<!-- Map JS -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0XgNv_xuQFF77kYam2oLALQNcX9hAq_U&libraries=places&callback=setUpGoogleMap"
+        async defer></script>
 </body>
 </html>

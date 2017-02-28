@@ -9,18 +9,24 @@ import java.util.List;
  *
  * @author awelton3
  */
-public class SymptomList {
+public class SymptomList
+{
 
-    @SerializedName("symptoms")
+    @SerializedName ("symptoms")
     private List<String> symptoms;
 
-    public List<String> getSymptoms() {
+    public List<String> getSymptoms()
+    {
         return symptoms;
     }
-    public void setSymptoms(List<String> symptoms) {
+
+    public void setSymptoms(List<String> symptoms)
+    {
         this.symptoms = symptoms;
     }
-    public SymptomList withSymptoms(List<String> symptoms) {
+
+    public SymptomList withSymptoms(List<String> symptoms)
+    {
         this.symptoms = symptoms;
         return this;
     }

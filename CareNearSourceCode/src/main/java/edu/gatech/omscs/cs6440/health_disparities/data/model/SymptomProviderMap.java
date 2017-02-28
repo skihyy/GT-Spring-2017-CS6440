@@ -9,18 +9,24 @@ import java.util.List;
  *
  * @author awelton3
  */
-public class SymptomProviderMap {
+public class SymptomProviderMap
+{
 
-    @SerializedName("symptom_provider_mappings")
+    @SerializedName ("symptom_provider_mappings")
     private List<SymptomProviderMapping> symptomProviderMappings;
 
-    public List<SymptomProviderMapping> getSymptomProviderMappings() {
+    public List<SymptomProviderMapping> getSymptomProviderMappings()
+    {
         return symptomProviderMappings;
     }
-    public void setSymptomProviderMappings(List<SymptomProviderMapping> symptomProviderMappings) {
+
+    public void setSymptomProviderMappings(List<SymptomProviderMapping> symptomProviderMappings)
+    {
         this.symptomProviderMappings = symptomProviderMappings;
     }
-    public SymptomProviderMap withSymptomProviderMappings(List<SymptomProviderMapping> symptomProviderMappings) {
+
+    public SymptomProviderMap withSymptomProviderMappings(List<SymptomProviderMapping> symptomProviderMappings)
+    {
         this.symptomProviderMappings = symptomProviderMappings;
         return this;
     }
