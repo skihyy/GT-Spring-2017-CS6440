@@ -14,19 +14,12 @@ A React-based version of the Shout resource tool, intended for use as a hybrid a
 * Using the following setting steps could avoid computer be full of unknown packages.
     * Install python, pip.
     * Install `virtualenv` by typing `pip install virtualenv`.
-    * `cd` to the root directory of `/Near Care`, create a new virtual Python environment by typing `virtualenv pyenvironment` where `pyenvironment` is the name of all drivers. You can change to other names. But note, git ignore only contains **`pyenvironment`**.
+    * `cd` to the root directory of `/Near Care`, create a new virtual Python environment by typing `virtualenv pyenvironment --no-site-packages` where `pyenvironment` is the name of all drivers. You can change to other names. But note, git ignore only contains **`pyenvironment`**.
     * Activate the virtual environment by typing `source pyenvironment/bin/activate`. To quit the current environment type `deactivate` or close current terminal.
     * Install node js virtual environment tool by typing `pip install nodeenv` under the activated virtual Python environment. Otherwise, the node js virtual environment tool will be installed in your system.
-    * Similarly, using `nodeenv nodejsenv` to set up node js environment.
+    * Similarly, using `nodeenv nodejsenv --node=6.9.0` to set up node js environment.
     * Similarly, using `source nodejsenv/bin/activate` for activation, `deactivate` or closing current terminal to quit environment.
-    * Then you can go to `npm start` step for the following instructions.
-* Install Node.js (developed with version 6)
-* clone the repo and ```cd``` to it
-* ```npm install```
-* ```npm start``` to start dev server
-* open a browser to http://localhost:8080 (Webpack is used for hot updates as files are edited)
-* Install Cordova as used
-* run cordova app, eg ```cordova run android```
+    * Then you can go to `npm update` and `npm start` to start.
 
 ##How it works
 * [Data](#data)
