@@ -27,10 +27,10 @@ gradlew.bat
 build
 
 # virtualenv and nodeenv environment
-/Current/pyenvironment
-/Current/nodejsenv
-/Current/node_modules
-/Current/code/node_modules
+/pyenvironment
+/nodejsenv
+/node_modules
+/code/node_modules
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
