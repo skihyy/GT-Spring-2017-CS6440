@@ -14,7 +14,7 @@ A React-based version of the Shout resource tool, intended for use as a hybrid a
 * Using the following setting steps could avoid computer be full of unknown packages.
     * Install python, pip.
     * Install `virtualenv` by typing `pip install virtualenv`.
-    * `cd` to the root directory of `/Near Care`, create a new virtual Python environment by typing `virtualenv pyenvironment --no-site-packages` where `pyenvironment` is the name of all drivers. You can change to other names. But note, git ignore only contains **`pyenvironment`**.
+    * `cd` to the code directory of Shout: `/Current`, create a new virtual Python environment by typing `virtualenv pyenvironment --no-site-packages` where `pyenvironment` is the name of all drivers. You can change to other names. But note, git ignore only contains **`pyenvironment`**.
     * Activate the virtual environment by typing `source pyenvironment/bin/activate`. To quit the current environment type `deactivate` or close current terminal.
     * Install node js virtual environment tool by typing `pip install nodeenv` under the activated virtual Python environment. Otherwise, the node js virtual environment tool will be installed in your system.
     * Similarly, using `nodeenv nodejsenv --node=6.9.0` to set up node js environment.
