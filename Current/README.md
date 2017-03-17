@@ -21,6 +21,18 @@ A React-based version of the Shout resource tool, intended for use as a hybrid a
     * Similarly, using `source nodejsenv/bin/activate` for activation, `deactivate` or closing current terminal to quit environment.
     * Then you can go to `npm update` and `npm start` to start.
 
+* After installation, the project has the following structure:
+
+```
+/Current      
+   /pyenvironment       
+   /node_modules      
+   /nodejsenv  
+   other files in the original shout  
+/Old  
+   / files in the previous solution of 6440
+```
+
 ##How it works
 * [Data](#data)
 * [Search](#search)
