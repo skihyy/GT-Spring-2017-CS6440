@@ -1,15 +1,3 @@
-# Health-Disparities-App
-Health Disparities App
-
-| Name        | Email           |
-| ------------- |:-------------:|
-|  |  |
-| Alex Welton | alexpwelton@gmail.com |
-| Matt Hernandez    | matt.hernandez82@gmail.com    | 
-| Robert Almendarez | robert.g.almendarez@gmail.com | 
-|  |  |
-
-
 Near Care with Shout App
 ============
 
@@ -22,14 +10,15 @@ A React-based version of the Shout resource tool, intended for use as a hybrid a
 
 ##Installation
 
-* Using the following setting steps could avoid computer be full of unknown packages.
+* Go to `/current`, all steps are handled in either `/current` or folders inside it.
+* Using the following setting steps could avoid computer be full of unknown packages. In this way, if the environment is no longer needed, just delete the environment folder and that's all.
     * Install python, pip.
-    * Install `virtualenv` by typing `pip install virtualenv`.
-    * `cd` to the root directory of `/Near Care`, create a new virtual Python environment by typing `virtualenv pyenvironment` where `pyenvironment` is the name of all drivers. You can change to other names. But note, git ignore only contains **`pyenvironment`**.
-    * Activate the virtual environment by typing `source pyenvironment/bin/activate`. To quit the current environment type `deactivate` or close current terminal.
-    * Install node js virtual environment tool by typing `pip install nodeenv` under the activated virtual Python environment. Otherwise, the node js virtual environment tool will be installed in your system.
-    * Similarly, using `nodeenv nodejsenv` to set up node js environment.
-    * Similarly, using `source nodejsenv/bin/activate` for activation, `deactivate` or closing current terminal to quit environment.
+    * Install `virtualenv` by typing `pip install virtualenv` (`virtualenv` will be installed with the system).
+    * Under `/current`, create a new virtual Python environment by typing `virtualenv pyenvironment` where `pyenvironment` is the name of the environment folder (delete it if the environment is no longer needed and you will find out the system is still clean). You can change to other names. But note, git ignore only contains **`pyenvironment`**.
+    * Activate the virtual environment by typing `source pyenvironment/bin/activate` or `. pyenvironment/bin/activate`. To quit the current environment type `deactivate` or close current terminal.
+    * Under `/current`, install node js virtual environment tool by typing `pip install nodeenv` under the **activated** virtual Python environment. Otherwise, the node js virtual environment tool will be installed in your system. 
+    * Similarly, using `nodeenv nodejsenv` to set up node js environment. The folder name `/nodejsenv` is also pre-defined in the git ignore.
+    * Similarly, using `source nodejsenv/bin/activate` or `. nodejsenv/bin/activate` for activation, `deactivate-node` or closing current terminal to quit environment.
     * Then you can go to `npm start` step for the following instructions.
 * Install Node.js (developed with version 6)
 * clone the repo and ```cd``` to it
