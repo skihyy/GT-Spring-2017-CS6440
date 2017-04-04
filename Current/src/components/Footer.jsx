@@ -12,6 +12,7 @@ import ActionPregnantWoman from 'material-ui/svg-icons/action/pregnant-woman';
 import PlacesChildCare from 'material-ui/svg-icons/places/child-care';
 import SocialDomain from 'material-ui/svg-icons/social/domain';
 import MapsLocalDining from 'material-ui/svg-icons/maps/local-dining';
+
 export default class Footer extends Component {
 
 render() {
@@ -43,10 +44,10 @@ render() {
             onTouchTap={() => onSelect(3)}
           />
           <BottomNavigationItem
-            label="Food"
-            icon={<MapsLocalDining />}
-            onTouchTap={() => onSelect(4)}
-          />
+             label="Food"
+             icon={<MapsLocalDining />}
+             onTouchTap={() => onSelect(4)}
+           />
           <BottomNavigationItem
             label="Housing"
             icon={<SocialDomain />}
