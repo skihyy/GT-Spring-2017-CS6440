@@ -11,7 +11,7 @@ export default class Map extends React.Component {
 
         this.defaults = {
             center: { lat: 33.7490, lng: -84.3880 },
-            zoom: 10,
+            zoom: 12,
         };
     }
 
@@ -23,6 +23,8 @@ export default class Map extends React.Component {
     render() {
         const { width, height } = this.props;
         const { getFilteredResources, displayResult, userLat, userLng, onGoogleApiLoad } = this.props;
+        console.log(this.props);
+        console.log(userLat);
         const filteredResources = getFilteredResources();
 
         const map = (
@@ -68,11 +70,11 @@ class Place extends React.Component {
             position: 'absolute',
             width: K_WIDTH * 7,
 
-            border: '3px solid #4DD0E1',
+            border: '2px solid #4DD0E1',
             backgroundColor: 'white',
             color: '#3f51b5',
-            fontSize: 10,
-            padding: 2
+            fontSize: 12,
+            padding: 3
         };
 
         const style = {
@@ -84,7 +86,7 @@ class Place extends React.Component {
             left: -K_WIDTH / 2,
             top: -K_HEIGHT / 2,
 
-            border: '3px solid #F06292',
+            border: '2px solid #F06292',
             borderRadius: K_HEIGHT,
             backgroundColor: 'white',
             textAlign: 'center',
@@ -93,11 +95,35 @@ class Place extends React.Component {
             fontWeight: 'bold',
             padding: 2
         };
+
+        const styleYou = {
+            // initially any map object has left top corner at lat lng coordinates
+            // it's on you to set object origin to 0,0 coordinates
+            position: 'absolute',
+            width: K_WIDTH * 1.5,
+            height: K_HEIGHT * 1.5,
+            left: -K_WIDTH  * 1.5/ 2,
+            top: -K_HEIGHT * 1.5/ 2,
+
+            border: '2px solid #c2185b',
+            borderRadius: K_HEIGHT,
+            backgroundColor: 'white',
+            textAlign: 'center',
+            color: '#b53f51',
+            fontSize: 14,
+            fontWeight: 'bold',
+            padding: 2
+        };
+
         return (
             <div>
-     <div style={this.props.$hover ? styleHover : style}>
-        {this.props.$hover ? this.props.text+"."+this.props.placename : this.props.text}
+     <div style={this.props.$hover && this.props.text !== "You" ? styleHover : style}>
+        {this.props.$hover && this.props.text !== "You" ? " " + this.props.text+"."+this.props.placename : this.props.text}
      </div>
+     <div style={this.props.text === "You" ? styleYou : style}>
+        {this.props.text}
+     </div>
+
   </div>
         );
     }
