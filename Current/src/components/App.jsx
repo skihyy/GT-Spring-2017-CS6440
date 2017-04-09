@@ -372,20 +372,29 @@ export default class App extends React.Component {
             this.filterResources('');
             this.setState({searchString:''});
         } else if (index === 1) {
-            this.filterResources('children');
-            this.setState({searchString:'children'});
+            this.filterResources('medical care');
+            this.setState({searchString:'medical care'});
         } else if (index === 2) {
-            this.filterResources('mental health');
-            this.setState({searchString:'mental health'});
-        } else if (index === 3) {
             this.filterResources('women');
             this.setState({searchString:'women'});
+        } else if (index === 3) {
+            this.filterResources('children');
+            this.setState({searchString:'children'});
         } else if (index === 4) {
+            this.filterResources('mental health');
+            this.setState({searchString:'mental health'});
+        } else if (index === 5) {
+            this.filterResources('dental');
+            this.setState({searchString:'dental'});
+        } else if (index === 6) {
             this.filterResources('food');
             this.setState({searchString:'food'});
-        } else if (index === 5) {
+        } else if (index === 7) {
             this.filterResources('housing');
             this.setState({searchString:'housing'});
+        } else if (index === 8) {
+            this.filterResources('other');
+            this.setState({searchString:'other'});
         }
     }
 
