@@ -18,6 +18,7 @@ import IconButton from 'material-ui/IconButton';
 import Drawer from 'material-ui/Drawer';
 import NavigationChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import Dialog from 'material-ui/Dialog';
 
 //import other components
 import Search from './Search.jsx';
@@ -81,6 +82,7 @@ export default class App extends React.Component {
 
         // this component's state acts as the overall store for now
         this.state = {
+            landingOpen: true,
             allResources: [],
             filteredResources: [],
             showMenu: false,                  //toggles left-hand menu
@@ -621,6 +623,29 @@ export default class App extends React.Component {
 
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <div id='wrapper'>
+          <Dialog
+            actions={
+              <FlatButton
+                label="Close"
+                primary={true}
+                onTouchTap={() => this.setState({landingOpen: false})}/>}
+            modal={false}
+            open={this.state.landingOpen}
+            onRequestClose={() => this.setState({landingOpen: false})}>
+
+            <h1>
+            Welcome
+            </h1>
+            <p>
+            Shout is an app to let Atlanta residents search and share information about affordable, free, or reduced-cost healthcare resources in Atlanta.
+            <br />
+            <br />
+            Type anything in search bar to begin, or simply click one of the resources button.
+            <br />
+            <br />
+            <a href="http://www.shoutforhealth.org">Read More</a>
+            </p>
+          </Dialog>
 
           <div id='header'>
               <AppBar iconElementLeft={<IconButton>{this.state.appbarIcon}</IconButton>} onLeftIconButtonTouchTap={() => this.appbarClick()}
@@ -655,7 +680,6 @@ export default class App extends React.Component {
                <LeftMenu displayAddResource={() => this.displayAddResource()} displayAbout={() => this.displayAbout()} addResource={(res)=>this.addResource(res)}/>
             </Drawer>
          </div>
-         
 
         </div>
       </MuiThemeProvider>
