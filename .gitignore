@@ -170,3 +170,6 @@ fabric.properties
 .npmignore
 node_modules/
 npm-debug.log
+
+# something else
+/Data

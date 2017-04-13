@@ -362,6 +362,55 @@ export default class App extends React.Component {
         }
     }
 
+    filterResourcesType(searchString) {
+
+        if (!searchString || searchString.length < 1) {
+            db.allDocs({ startkey: 'Resource_', endkey: 'Resource_\uffff', include_docs: true }, (err, doc) => {
+                this.setState({searchString:""});
+                if (err) { return console.log(err); }
+                this.redrawResources(doc.rows);
+            });
+        } else {
+        this.setState({searchString:searchString});
+            db.search({
+                query: searchString,
+                fields: ['resourcetype'],
+                include_docs: true,
+                mm: '100%'
+            }, (err, list) => {
+                if (err) {
+                    this.error(err);
+                }
+                var matches=[];
+                list.rows.forEach(function (res) {
+                    if (res.id.startsWith('tags')) {
+
+                        console.log(res.label);
+                        db.search({
+                            query: res._id,
+                            fields: ['name'],
+                            include_docs: true,
+                            mm: '33%'
+                        }, (err, list) => {
+
+                            if (err) {
+                                return console.log("error searching DB:"+err);
+                            }
+                            else if (res.id.startsWith('Resource')) {
+                                matches.push(res);
+                            }
+                        });
+                    } else if (res.id.startsWith('Resource')) {
+                        matches.push(res);
+                    } else {
+                        console.log("unknown item type");
+                    }
+                });
+                this.redrawResources(matches);
+            });
+        }
+    }
+
 
 
 //This function allows user to filter resources based on the selected icon in the footer
@@ -374,28 +423,28 @@ export default class App extends React.Component {
             this.filterResources('');
             this.setState({searchString:''});
         } else if (index === 1) {
-            this.filterResources('medical care');
+            this.filterResourcesType('medical care');
             this.setState({searchString:'medical care'});
         } else if (index === 2) {
-            this.filterResources('women');
+            this.filterResourcesType('women');
             this.setState({searchString:'women'});
         } else if (index === 3) {
-            this.filterResources('children');
+            this.filterResourcesType('children');
             this.setState({searchString:'children'});
         } else if (index === 4) {
-            this.filterResources('mental health');
+            this.filterResourcesType('mental health');
             this.setState({searchString:'mental health'});
         } else if (index === 5) {
-            this.filterResources('dental');
+            this.filterResourcesType('dental');
             this.setState({searchString:'dental'});
         } else if (index === 6) {
-            this.filterResources('food');
+            this.filterResourcesType('food');
             this.setState({searchString:'food'});
         } else if (index === 7) {
-            this.filterResources('housing');
+            this.filterResourcesType('housing');
             this.setState({searchString:'housing'});
         } else if (index === 8) {
-            this.filterResources('other');
+            this.filterResourcesType('other');
             this.setState({searchString:'other'});
         }
     }
