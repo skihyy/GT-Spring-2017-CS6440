@@ -252,10 +252,14 @@ export default class AddResource extends React.Component {
                          >
                          <MenuItem value={1} primaryText="Clinic" />
                          <MenuItem value={2} primaryText="E.R. or Urgent Care" />
-                         <MenuItem value={3} primaryText="Housing" />
-                         <MenuItem value={4} primaryText="Food" />
-                         <MenuItem value={5} primaryText="General Medical" />
-                         <MenuItem value={6} primaryText="Dental" />
+                         <MenuItem value={3} primaryText="General Medical" />
+                         <MenuItem value={4} primaryText="Women" />
+                         <MenuItem value={5} primaryText="Children" />
+                         <MenuItem value={6} primaryText="Mental Health" />
+                         <MenuItem value={7} primaryText="Dental" />
+                         <MenuItem value={8} primaryText="Housing" />
+                         <MenuItem value={9} primaryText="Food" />
+                         <MenuItem value={10} primaryText="Other" />
                        </SelectField>
 
           </div>
