@@ -423,7 +423,7 @@ export default class App extends React.Component {
             this.filterResources('');
             this.setState({searchString:''});
         } else if (index === 1) {
-            this.filterResourcesType('medical care');
+            this.filterResourcesType('clinic');
             this.setState({searchString:'medical care'});
         } else if (index === 2) {
             this.filterResourcesType('women');
