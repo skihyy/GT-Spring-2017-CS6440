@@ -376,7 +376,7 @@ export default class App extends React.Component {
                 query: searchString,
                 fields: ['resourcetype'],
                 include_docs: true,
-                mm: '100%'
+                mm: '33%'
             }, (err, list) => {
                 if (err) {
                     this.error(err);
@@ -423,7 +423,7 @@ export default class App extends React.Component {
             this.filterResources('');
             this.setState({searchString:''});
         } else if (index === 1) {
-            this.filterResourcesType('clinic');
+            this.filterResourcesType('clinic medical care');
             this.setState({searchString:'medical care'});
         } else if (index === 2) {
             this.filterResourcesType('women');
