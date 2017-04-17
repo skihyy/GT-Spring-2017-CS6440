@@ -117,11 +117,25 @@ export default class AddResource extends React.Component {
 
     formatSubmission() {
 
-    var type="clinic";
+    var type="Clinic";
     if(this.state.value_Type==2){
-      type="emergency";
+      type="Emergency";
     }else if(this.state.value_Type==3){
-      type="housing";
+      type="General Medical";
+    }else if(this.state.value_Type==4){
+      type="Women";
+    }else if(this.state.value_Type==5){
+      type="Children";
+    }else if(this.state.value_Type==6){
+      type="Mental Health";
+    }else if(this.state.value_Type==7){
+      type="Dental";
+    }else if(this.state.value_Type==8){
+      type="Housing";
+    }else if(this.state.value_Type==9){
+      type="Food";
+    }else if(this.state.value_Type==10){
+      type="Other";
     }
 
       var temp = {
