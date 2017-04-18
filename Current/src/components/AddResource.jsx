@@ -117,25 +117,25 @@ export default class AddResource extends React.Component {
 
     formatSubmission() {
 
-    var type="Clinic";
+    var type="clinic";
     if(this.state.value_Type==2){
-      type="Emergency";
+      type="emergency";
     }else if(this.state.value_Type==3){
-      type="General Medical";
+      type="medical care";
     }else if(this.state.value_Type==4){
-      type="Women";
+      type="women";
     }else if(this.state.value_Type==5){
-      type="Children";
+      type="children";
     }else if(this.state.value_Type==6){
-      type="Mental Health";
+      type="mental health";
     }else if(this.state.value_Type==7){
-      type="Dental";
+      type="dental";
     }else if(this.state.value_Type==8){
-      type="Housing";
+      type="housing";
     }else if(this.state.value_Type==9){
-      type="Food";
+      type="food";
     }else if(this.state.value_Type==10){
-      type="Other";
+      type="others";
     }
 
       var temp = {
@@ -273,7 +273,7 @@ export default class AddResource extends React.Component {
                          <MenuItem value={7} primaryText="Dental" />
                          <MenuItem value={8} primaryText="Housing" />
                          <MenuItem value={9} primaryText="Food" />
-                         <MenuItem value={10} primaryText="Other" />
+                         <MenuItem value={10} primaryText="Others" />
                        </SelectField>
 
           </div>
