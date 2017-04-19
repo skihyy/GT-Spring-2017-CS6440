@@ -15,6 +15,7 @@ import MapsLocalDining from 'material-ui/svg-icons/maps/local-dining';
 import MapsLocalHospital from 'material-ui/svg-icons/maps/local-hospital';
 import SocialMoodBad from 'material-ui/svg-icons/social/mood-bad';
 import NavigationMoreHoriz from 'material-ui/svg-icons/navigation/more-horiz';
+import ImageWebCloudy from 'material-ui/svg-icons/image/wb-cloudy';
 
 export default class Footer extends Component {
 
@@ -48,7 +49,7 @@ render() {
           />
           <BottomNavigationItem
             label="Psychiatric"
-            icon={<ActionFavorite />}
+            icon={<ImageWebCloudy />}
             onTouchTap={() => onSelect(4)}
           />
           <BottomNavigationItem

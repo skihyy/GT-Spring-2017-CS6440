@@ -121,7 +121,21 @@ export default class AddResource extends React.Component {
     if(this.state.value_Type==2){
       type="emergency";
     }else if(this.state.value_Type==3){
+      type="medical care";
+    }else if(this.state.value_Type==4){
+      type="women";
+    }else if(this.state.value_Type==5){
+      type="children";
+    }else if(this.state.value_Type==6){
+      type="mental health";
+    }else if(this.state.value_Type==7){
+      type="dental";
+    }else if(this.state.value_Type==8){
       type="housing";
+    }else if(this.state.value_Type==9){
+      type="food";
+    }else if(this.state.value_Type==10){
+      type="others";
     }
 
       var temp = {
@@ -259,7 +273,7 @@ export default class AddResource extends React.Component {
                          <MenuItem value={7} primaryText="Dental" />
                          <MenuItem value={8} primaryText="Housing" />
                          <MenuItem value={9} primaryText="Food" />
-                         <MenuItem value={10} primaryText="Other" />
+                         <MenuItem value={10} primaryText="Others" />
                        </SelectField>
 
           </div>
