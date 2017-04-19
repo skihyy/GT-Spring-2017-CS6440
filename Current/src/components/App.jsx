@@ -444,8 +444,8 @@ export default class App extends React.Component {
             this.filterResourcesType('housing');
             this.setState({searchString:'housing'});
         } else if (index === 8) {
-            this.filterResourcesType('other');
-            this.setState({searchString:'other'});
+            this.filterResourcesType('others');
+            this.setState({searchString:'others'});
         }
     }
 
