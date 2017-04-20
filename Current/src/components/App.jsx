@@ -508,7 +508,7 @@ export default class App extends React.Component {
             this.setState({ third1footer:""});
             this.setState({third2footer:""});
         }else if (index===14){
-            this.filterResourcesType('eye glass service');
+            this.filterResourcesType('eye glass');
             this.setState({searchString:'eye glass service'});
             this.setState({ third1footer:""});
             this.setState({third2footer:""});
@@ -521,12 +521,12 @@ export default class App extends React.Component {
             
         }else if (index===17){
             this.filterResourcesType('community voice mail');
-            this.setState({searchString:'eye glass service'});
+            this.setState({searchString:'eye glass services'});
         }else if (index===18){
             this.filterResourcesType('birth certificate');
             this.setState({searchString:'birth certificate'});
         }else if (index===19){
-            this.filterResourcesType('representative payee service');
+            this.filterResourcesType('representative payee');
             this.setState({searchString:'representative payee service'});
         }else if (index===20){
             
@@ -538,7 +538,7 @@ export default class App extends React.Component {
             this.setState({ third1footer:""});
         }
         else if (index===23){
-           this.filterResourcesType('general clothing');
+           this.filterResourcesType('generalclothing');
            this.setState({searchString:'general clothing'});
         }
         else if (index===24){
