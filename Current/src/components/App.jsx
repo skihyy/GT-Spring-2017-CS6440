@@ -24,6 +24,9 @@ import Dialog from 'material-ui/Dialog';
 import Search from './Search.jsx';
 import SearchInputs from './SearchInputs.jsx';
 import Footer from './Footer.jsx';
+import Second_Footer from './secondFooter.jsx';
+import Third_One_Footer from './third-one-footer.jsx'
+import Third_Two_Footer from './third-two-footer.jsx'
 import LeftMenu from './LeftMenu.jsx';
 import ClinicPage from './ClinicPage.jsx';
 import AddResource from './AddResource.jsx';
@@ -93,6 +96,10 @@ export default class App extends React.Component {
             appbarSubtitle: 'Find Accessible Healthcare.',
             appbarIcon: <NavigationMenu />,
             searchBar: "",
+            secFooter:"",
+            third1footer:"",
+            third2footer:"",
+            thirdFooter:"",
             pageLoading: 'true',              //true if page has not loaded yet
             userLat: '33.7490',
             userLng: '-84.3880',
@@ -272,6 +279,9 @@ export default class App extends React.Component {
         this.setState({ appbarTitle: clinicname });
         this.setState({ appbarSubtitle: '' });
         this.setState({ searchBar: "" });
+        this.setState({secFooter:""});
+        this.setState({third1footer:""});
+        this.setState({third2footer:""});
         this.setState({ appbarState: true });
     //now can load a different component. note: all state variables in App.jsx must be changed before it's unmounted, or React throws an error
         this.setState({ screen: <ClinicPage container={this.refs.content} footer={this.refs.footer} displaySearch={(result) => this.displaySearch()} addTags={(tags, res_name)=>this.addTags(tags,res_name)} addFeedback={(x) => this.addFeedback(x)} getTags={() => this.state.clinicpageTags} getFeedbacks={()=>this.state.clinicpageFeedbacks} result={result} vouchFor={(a,b,c)=>this.vouchFor(a,b,c)} vouchAgainst={(a,b,c)=>this.vouchAgainst(a,b,c)} addSingleTag={(a,b)=>this.addSingleTag(a,b)} addFlag={()=>this.addFlag(a,b)}/> });
@@ -422,30 +432,118 @@ export default class App extends React.Component {
         if (index === 0) {
             this.filterResources('');
             this.setState({searchString:''});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 1) {
             this.filterResourcesType('clinic medical care');
             this.setState({searchString:'medical care'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 2) {
             this.filterResourcesType('women');
             this.setState({searchString:'women'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 3) {
             this.filterResourcesType('children');
             this.setState({searchString:'children'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 4) {
             this.filterResourcesType('mental health');
             this.setState({searchString:'mental health'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 5) {
             this.filterResourcesType('dental');
             this.setState({searchString:'dental'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 6) {
             this.filterResourcesType('food');
             this.setState({searchString:'food'});
+            this.setState({ secFooter:""});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
         } else if (index === 7) {
             this.filterResourcesType('housing');
             this.setState({searchString:'housing'});
+            this.setState({ secFooter:""});
+            this.setState({third2footer:""});
         } else if (index === 8) {
-            this.filterResourcesType('others');
-            this.setState({searchString:'others'});
+
+            this.setState({ secFooter:  <Second_Footer selectedIndex={this.state.selectedFooterIndex} onSelect={(index) => this.footerSelect(index)}/>});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+
+        } else if (index===9){
+            this.filterResourcesType('domestic voilence shelter');
+            this.setState({searchString:'domestic voilence shelter'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===10){
+            this.filterResourcesType('homeless service');
+            this.setState({searchString:'homeless service'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===11){
+            this.filterResourcesType('transportation');
+            this.setState({searchString:'transportation'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===12){
+            this.filterResourcesType('veteran services');
+            this.setState({searchString:'veteran services'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===13){
+            this.filterResourcesType('showers');
+            this.setState({searchString:'showers'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===14){
+            this.filterResourcesType('eye glass service');
+            this.setState({searchString:'eye glass service'});
+            this.setState({ third1footer:""});
+            this.setState({third2footer:""});
+        }else if (index===15){
+            this.setState({ third1footer:""});
+            this.setState({ third1footer:<Third_Two_Footer selectedIndex={this.state.selectedFooterIndex} onSelect={(index) => this.footerSelect(index)}/>});
+        }else if (index===16){
+            this.setState({third2footer:""});
+            this.setState({ third1footer:<Third_One_Footer selectedIndex={this.state.selectedFooterIndex} onSelect={(index) => this.footerSelect(index)}/>});
+            
+        }else if (index===17){
+            this.filterResourcesType('community voice mail');
+            this.setState({searchString:'eye glass service'});
+        }else if (index===18){
+            this.filterResourcesType('birth certificate');
+            this.setState({searchString:'birth certificate'});
+        }else if (index===19){
+            this.filterResourcesType('representative payee service');
+            this.setState({searchString:'representative payee service'});
+        }else if (index===20){
+            
+        }else if (index===21){
+            this.filterResourcesType('voter registration');
+            this.setState({searchString:'voter registration'});
+            this.setState({ third2footer:""});
+        }else if (index===22){
+            this.setState({ third1footer:""});
+        }
+        else if (index===23){
+           this.filterResourcesType('general clothing');
+           this.setState({searchString:'general clothing'});
+        }
+        else if (index===24){
+          this.filterResourcesType('baby clothing');
+            this.setState({searchString:'baby clothing'});
         }
     }
 
@@ -733,7 +831,19 @@ export default class App extends React.Component {
           </div>
           <div ref='footer' id='footer'>
             <Footer selectedIndex={this.state.selectedFooterIndex} onSelect={(index) => this.footerSelect(index)}/>
-          </div>          
+          </div>       
+           
+          <div ref='footer2' id='footer2'>
+            {this.state.secFooter}
+          </div>  
+
+          <div ref='footer31' id='footer31'>
+            {this.state.third1footer}
+          </div>  
+
+          <div ref='footer31' id='footer31'>
+            {this.state.third2footer}
+          </div>  
 
           <div ref='content' id='content'>
           <CSSTransitionGroup transitionName='slide' transitionEnterTimeout={ 100 } transitionLeaveTimeout={ 300 }>
