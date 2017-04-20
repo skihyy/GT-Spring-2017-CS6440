@@ -465,6 +465,7 @@ export default class App extends React.Component {
             }
             else {
                 invalidCoordination.push(originalArray[i]);
+            }
         }
 
         validCoordination.sort((a, b) => {
