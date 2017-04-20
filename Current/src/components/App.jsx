@@ -488,7 +488,7 @@ export default class App extends React.Component {
             this.setState({ third1footer:""});
             this.setState({third2footer:""});
         }else if (index===10){
-            this.filterResourcesType('homeless service');
+            this.filterResourcesType('homeless');
             this.setState({searchString:'homeless service'});
             this.setState({ third1footer:""});
             this.setState({third2footer:""});
