@@ -520,7 +520,7 @@ export default class App extends React.Component {
             this.setState({ third1footer:<Third_One_Footer selectedIndex={this.state.selectedFooterIndex} onSelect={(index) => this.footerSelect(index)}/>});
             
         }else if (index===17){
-            this.filterResourcesType('community voice mail');
+            this.filterResourcesType('community_voice_mail');
             this.setState({searchString:'eye glass services'});
         }else if (index===18){
             this.filterResourcesType('birth certificate');
