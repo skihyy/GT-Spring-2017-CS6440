@@ -542,7 +542,7 @@ export default class App extends React.Component {
            this.setState({searchString:'general clothing'});
         }
         else if (index===24){
-          this.filterResourcesType('baby clothing');
+          this.filterResourcesType('babyclothing');
             this.setState({searchString:'baby clothing'});
         }
     }
