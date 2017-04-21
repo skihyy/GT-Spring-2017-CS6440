@@ -483,7 +483,7 @@ export default class App extends React.Component {
             this.setState({third2footer:""});
 
         } else if (index===9){
-            this.filterResourcesType('domestic voilence shelter');
+            this.filterResourcesType('domestic_violence_shelter');
             this.setState({searchString:'domestic voilence shelter'});
             this.setState({ third1footer:""});
             this.setState({third2footer:""});
